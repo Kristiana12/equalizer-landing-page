@@ -1,0 +1,32 @@
+$colors: (
+  'color-light': #fcfaf9,
+  'color-dark': #191826,
+  'color-button-light-hover': #66e2dc,
+  'color-button-dark-hover': #ffb964,
+  'color-section-bg': #fa7453,
+);
+
+$font-sizes: (
+  'font-size-small': 1rem,
+  'font-size-medium': 1.125rem,
+  'font-size-large': 1.25rem,
+  'font-size-xlarge': 1.375rem,
+);
+
+@function font-size($fontSize) {
+  @return map-get($font-sizes, $fontSize);
+}
+
+@function color($colorChoice) {
+  @return map-get($colors, $colorChoice);
+}
+
+$break-points: (
+  'break-point-tablet': 675px,
+  'break-point-dekstop': 1150px,
+  'breakpoint-large-screen': 1500px,
+);
+
+@function break-point($break-point-limit) {
+  @return map-get($break-points, $break-point-limit);
+} ;

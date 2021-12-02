@@ -1,0 +1,113 @@
+.download {
+  position: relative;
+
+  &__img {
+    background: color(color-dark) url(../assets/bg-pattern-2.png) no-repeat top;
+  }
+
+  &_phone-img {
+    width: calc(min(10rem + 14vw, 19.5rem));
+    position: relative;
+    top: -75px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__premium {
+    background-color: color(color-section-bg);
+    color: color(color-light);
+    padding: 3rem 2.1rem;
+    border-radius: 12px;
+    font-size: font-size(font-size-medium);
+    position: relative;
+    top: -30px;
+    line-height: 1.8;
+
+    &--title {
+      font-size: 2rem;
+    }
+
+    &--para {
+      margin: 0.8rem 0 1rem;
+    }
+
+    &--price {
+      display: flex;
+      align-items: center;
+      font-size: 1.25rem;
+      & span {
+        display: inline-block;
+        font-size: 4.05rem;
+        font-weight: bold;
+        margin-right: 1rem;
+      }
+    }
+
+    &--ios {
+      margin: 2rem 0 1rem;
+      background-color: color(color-dark);
+      color: color(color-light);
+
+      &:hover {
+        background-color: color(color-button-light-hover);
+      }
+    }
+
+    &--android {
+      background-color: color(color-light);
+
+      &:hover {
+        background-color: color(color-button-dark-hover);
+      }
+    }
+  }
+}
+
+// ************ MEDIA min-width: 675px *****************
+@include media-tablet {
+  .download {
+    padding: 3.8rem 0 10.73rem;
+    &__img {
+      border-radius: 12px;
+      height: 600px;
+    }
+    &_phone-img {
+      top: -95px;
+      left: 26%;
+    }
+
+    &__premium {
+      width: calc(min(18rem + 20vw));
+      position: absolute;
+      padding: 3rem;
+      top: 31%;
+      right: 95px;
+    }
+  }
+}
+
+// ************ MEDIA min-width: 1150px *****************
+@include media-desktop {
+  .download {
+    width: 1100px;
+    margin: 0 auto;
+    padding-top: 5rem;
+
+    &_phone-img {
+      //for IE and Opera Mini
+      max-width: 19.5rem;
+
+      left: 24%;
+      top: -175px;
+    }
+
+    &__premium {
+      //for IE and Opera Mini
+      max-width: 27.8rem;
+
+      top: 20%;
+      right: 124px;
+      padding: 3.6rem 3.5rem 3rem;
+    }
+  }
+}

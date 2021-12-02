@@ -1,0 +1,61 @@
+#header {
+  background: url(../assets/bg-main-mobile.png) no-repeat right -180px top -200px /
+    cover;
+  background-color: color(color-light);
+  padding: 3.8rem calc(1rem + 2vw) 10.73rem;
+}
+
+// ************ MEDIA min-width: 675px *****************
+@include media-tablet {
+  body {
+    background-color: color(color-light);
+  }
+  #header {
+    background: url(../assets/bg-pattern-1.svg) no-repeat right -35px top -30px/250px,
+      url(../assets/bg-main-tablet.png) no-repeat -120px -80px / cover;
+
+    h1.header__title {
+      max-width: calc(10rem + 40vw);
+    }
+
+    .header__para {
+      font-size: font-size(font-size-medium);
+      width: calc(24rem + 20vw);
+    }
+  }
+}
+
+// ************ MEDIA min-width: 1150px *****************
+@include media-desktop {
+  body {
+    background: url(../assets/bg-pattern-1.svg) no-repeat right 0px top -30px/300px,
+      url(../assets/bg-main-desktop.png) no-repeat top -200px left -170px /
+        cover;
+    background-color: color(color-light);
+  }
+
+  #header {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3.8rem 0 10.73rem;
+
+    background: none;
+    h1.header__title {
+      max-width: 90%;
+    }
+
+    .header__para {
+      font-size: font-size(font-size-large);
+      width: 80%;
+    }
+  }
+}
+
+// ************ MEDIA min-width: 1500px *****************
+@include media-large-screen {
+  body {
+    background: url(../assets/bg-pattern-1.svg) no-repeat right 0px top -30px/300px,
+      url(../assets/bg-main-desktop.png) no-repeat center/ cover;
+    background-color: color(color-light);
+  }
+}

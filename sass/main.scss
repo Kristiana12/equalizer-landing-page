@@ -1,0 +1,45 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+  position: relative;
+}
+
+li {
+  list-style: none;
+}
+
+@mixin media-tablet {
+  @media screen and (min-width: break-point(break-point-tablet)) {
+    @content;
+  }
+}
+
+@mixin media-desktop {
+  @media screen and (min-width: break-point(break-point-dekstop)) {
+    @content;
+  }
+}
+
+@mixin media-large-screen {
+  @media screen and (min-width: break-point(breakpoint-large-screen)) {
+    @content;
+  }
+}
+
+@import 'variables';
+@import 'typography';
+@import 'utility-classes';
+@import 'header';
+@import 'middle';
+@import 'footer';
